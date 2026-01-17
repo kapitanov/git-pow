@@ -1,0 +1,11 @@
+name: check-pow
+on: push
+
+jobs:
+  check-pow:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v6
+      with:
+        fetch-depth: 0
+    - run: ./git-pow-verify.sh
